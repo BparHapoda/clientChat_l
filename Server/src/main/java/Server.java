@@ -27,7 +27,8 @@ public class Server {
                 System.out.println("Клиент успешно подключился");
                 addClient(new ClientService(socket,this));
             }
-        }catch (IOException e){throw new RuntimeException("Подключение клиента не удалось");}
+        }
+        catch (IOException e){throw new RuntimeException("Подключение клиента не удалось");}
     }
 
 public void addClient(ClientService client){clients.add(client);}
