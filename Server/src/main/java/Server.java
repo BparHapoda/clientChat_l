@@ -28,6 +28,7 @@ public class Server {
                 addClient(new ClientService(socket,this));
             }
         }
+
         catch (IOException e){throw new RuntimeException("Подключение клиента не удалось");}
     }
 
